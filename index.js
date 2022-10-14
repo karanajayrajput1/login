@@ -7,6 +7,12 @@ function onSighIn(googleUser) {
     $(".data").css("display","block");
     $(".g-signin2").css("display","none");
 }
+window.gapi.client
+        .init({
+          clientId:'642224205119-smmapin9cokl0q5t4576877uieal2kpa.apps.googleusercontent.com',
+          scope: "email",
+          plugin_name:'resume'
+        });
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
