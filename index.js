@@ -1,6 +1,7 @@
 function onSighIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     $("#name").text(profile.getName());
+    console.log('Name: ' + profile.getName());
     $("#email").text(profile.getEmail());
     $("#image").attr('src',profile.getImageUrl());
     $(".data").css("display","block");
